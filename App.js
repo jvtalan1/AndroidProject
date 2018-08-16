@@ -1,35 +1,9 @@
 import React, { Component } from 'react'
 import { Button, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View } from 'react-native'
-import FlatListExample from './src/FlatListExample'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  view1: {
-    width: 100,
-    height: 100,
-    backgroundColor: 'red',
-    alignSelf: 'center'
-  },
-  input: {
-    width: 200,
-    height: 80,
-    borderWidth: 1
-  },
-  button: {
-    width: 500,
-    height: 100,
-  },
-  button2: {
-    backgroundColor: 'green',
-    height: 100
-  },
-  button3: {
-    backgroundColor: 'yellow',
-    height: 100
-  }
-})
+import AnimationExample from './src/AnimationExample'
+import FlatListExample from './src/FlatListExample'
+import styles from './styles/AppStyles'
 
 class HomeScreen extends Component {
   constructor (props) {
@@ -47,9 +21,9 @@ class HomeScreen extends Component {
 
   render () {
     return (
-      <View style={styles.container}>
-        <View style={styles.view1}>
-        </View>
+      <View style={{flex: 1}}>
+        <AnimationExample />
+        {/* <View style={[styles.view1, { backgroundColor: 'blue'}]} />
         <TextInput onChangeText={(text) => this.handleChange(text)} style={styles.input}/>
         <Button onPress={() => { console.log('Button') }} title='Button' style={styles.button} />
         <TouchableOpacity onPress={() => { console.log('TouchableOpacity') }} title='TouchabbleOpacity' style={styles.button2}>
@@ -58,7 +32,7 @@ class HomeScreen extends Component {
         <TouchableHighlight onPress={() => { console.log('TouchableHighlight') }} style={styles.button3}>
           <Text>TouchableHighlight</Text>
         </TouchableHighlight>
-        <FlatListExample />
+        <FlatListExample /> */}
       </View>
     )
   }
